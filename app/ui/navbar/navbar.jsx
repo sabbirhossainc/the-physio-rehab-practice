@@ -95,7 +95,7 @@ export default function NavComp() {
             <Image src={Logo} className="rounded-md w-full h-full" alt="Logo" width={100} height={100} priority />
           </Link>
           <div
-            className="items-center justify-between w-full md:flex md:w-auto md:order-1"
+            className="items-center hidden justify-between w-full md:flex md:w-auto md:order-1"
             id="navbar-dropdown"
           >
             <ul className="flex flex-col p-4 md:p-0 mt-4 font-medium border border-gray-100 rounded-lg bg-transparent md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0 dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700">

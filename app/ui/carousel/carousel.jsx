@@ -1,10 +1,8 @@
 "use client";
 
 import Image from "next/image";
-
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Pagination, Autoplay } from "swiper/modules";
-
 import { images } from "@/lib/images";
 
 import "swiper/css";
@@ -16,6 +14,7 @@ export default function Page() {
   return (
     <>
       <div className="mt-28 bg-gray-200">
+        {/* hero Title */}
         <div className="hidden lg:block absolute z-10 h-auto p-32 min-w-7xl bg-transparent text-gray-50 text-center top-52 lg:left-[4rem] md:left-[3rem] xl:left-[25rem] mx-auto">
           <p className="font-bold text-3xl drop-shadow-xl">
             WELCOME TO THE GUILDHALL PRACTICE

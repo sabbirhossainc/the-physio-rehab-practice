@@ -3,8 +3,8 @@ import Link from "next/link";
 
 const card = (props) => {
   return (
-    <div className="">
-      <div className="max-w-sm bg-white rounded-lg shadow-gray-400 shadow-sm-light dark:bg-gray-800 dark:border-gray-700">
+    <div className="px-5">
+      <div className="max-w-sm rounded-lg shadow-gray-400 shadow-sm-light dark:bg-gray-800 dark:border-gray-700">
         <Link href="">
           <Image className="rounded-t-lg" src={props.url} alt={props.alt} />
         </Link>
@@ -14,7 +14,7 @@ const card = (props) => {
               {props.heading}
             </h5>
           </Link>
-          <p className="mb-3 font-normal text-gray-700 dark:text-gray-400 text-center">
+          <p className="mb-3 font-normal text-gray-700 dark:text-gray-400 text-justify">
             {props.body}
           </p>
         </div>

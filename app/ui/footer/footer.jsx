@@ -8,8 +8,8 @@ import Link from "next/link";
 
 const footer = () => {
   return (
-    <div className="top-10">
-      <footer className="text-gray-400 bg-gray-900 body-font">
+    <div className="">
+      <footer className="text-gray-400 bg-gray-900">
         <div className="container px-5 py-20 mx-auto flex md:items-center lg:items-start md:flex-row md:flex-nowrap flex-wrap flex-col">
           <div className="w-96 flex flex-col md:mx-0 mx-auto items-center justify-center text-center md:text-left gap-2">
             <Link

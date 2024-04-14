@@ -1,5 +1,7 @@
 import { Inter } from "next/font/google";
+import Navigation from "@/app/ui/navbar/navbar";
 import "./globals.css";
+import 'flowbite';
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -12,9 +14,16 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <head>
-      <script src="https://static.elfsight.com/platform/platform.js" data-use-service-core defer></script>
+        <script
+          src="https://static.elfsight.com/platform/platform.js"
+          data-use-service-core
+          defer
+        ></script>
       </head>
-      <body className={inter.className}>{children}</body>
+      <body className={inter.className}>
+        <Navigation />
+        {children}
+      </body>
     </html>
   );
 }

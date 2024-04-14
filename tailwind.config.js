@@ -9,7 +9,24 @@ module.exports = {
     // flowbite.content(),
   ],
   theme: {
-    extend: {},
+    extend: {
+      // screens: {
+      //   sm: "480px",
+      //   md: "768px",
+      //   lg: "976px",
+      //   xl: "1440px",
+      // },
+      colors: {
+        "primary": "#5700AD",
+        "primary-bg": "#FCECFE",
+        "secondary-bg": "#F7F8FA",
+        "icon-bg": "#DEDEDE",
+      },
+      fontFamily: {
+        sans: ['Montserrat','Product Sans','sans-serif'],
+        serif: ['Merriweather', 'serif'],
+      },
+    },
   },
   plugins: [require("flowbite/plugin")],
 };

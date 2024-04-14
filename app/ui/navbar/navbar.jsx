@@ -12,6 +12,7 @@ export default function NavComp() {
 
   // handel show hide state for dropdown
   const [show, setShow] = useState(false);
+  const [showMenu, setShowMenu] = useState(false);
 
   // dropdown item
   const data = [
@@ -44,10 +45,11 @@ export default function NavComp() {
   // handel class for navbar
   const handelClass = (type = null) => {
     let staticClass =
-      "block py-2 px-3 rounded text-gray-900 hover:text-blue-700 md:p-0";
+      "block py-2 px-3 rounded text-gray-900 hover:text-blue-700 font-semibold md:p-0";
     if (type === path) {
       staticClass -= "text-gray-900";
-      staticClass += " block py-2 px-3 rounded text-blue-700 hover:text-blue-700 md:p-0";
+      staticClass +=
+        " block py-2 px-3 rounded text-blue-700 hover:text-blue-700 font-semibold md:p-0";
     } else {
       staticClass += "";
     }
@@ -56,10 +58,10 @@ export default function NavComp() {
 
   // handel class for navbar dropdown
   const handelClassDropdown = (type = null) => {
-    let staticClassDropdown = "block px-4 py-2 hover:bg-gray-100 text-gray-900";
+    let staticClassDropdown = "block px-4 py-2 hover:bg-gray-100 text-gray-900 font-medium";
     if (type === path) {
       staticClassDropdown -= "text-gray-900";
-      staticClassDropdown += " block px-4 py-2 hover:bg-gray-100 text-blue-700";
+      staticClassDropdown += " block px-4 py-2 hover:bg-gray-100 text-blue-700 font-medium";
     } else {
       staticClassDropdown += "";
     }
@@ -86,16 +88,33 @@ export default function NavComp() {
 
   return (
     <>
-      <nav className="bg-gray-200 dark:bg-gray-900 fixed w-full z-20 top-0 start-0">
-        <div className="max-w-sm md:max-w-7xl flex flex-wrap items-center justify-between mx-auto p-1">
-          <Link
-            href="/"
-            className="flex items-center space-x-3 rtl:space-x-reverse"
-          >
-            <Image src={Logo} className="rounded-md w-full h-full py-2" alt="Logo" width={100} height={100} priority />
-          </Link>
+      <nav className="bg-gray-200 dark:bg-gray-900 fixed z-20 w-full top-0">
+        <div className="max-w-xs md:max-w-7xl flex flex-wrap items-center justify-between mx-auto p-2">
+          <div className="flex justify-between items-center gap-44">
+            <Link href="/">
+              <Image
+                src={Logo}
+                className="rounded-md w-full h-full py-2"
+                alt="Logo"
+                width={100}
+                height={100}
+                priority
+              />
+            </Link>
+            <div className="md:hidden ml-auto">
+              <button className="p-2" onClick={() => setShowMenu(!showMenu)}>
+              <svg className="w-6 h-6" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 17 14">
+                    <path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M1 1h15M1 7h15M1 13h15"/>
+                </svg>
+              </button>
+            </div>
+          </div>
           <div
-            className="items-center justify-between w-full md:flex md:w-auto md:order-1"
+            className={
+              showMenu
+                ? "items-center justify-between w-full md:flex md:w-auto"
+                : "hidden items-center justify-between w-full md:flex md:w-auto"
+            }
             id="navbar-dropdown"
           >
             <ul className="flex flex-col p-4 md:p-0 mt-2 font-medium border border-blue-500 rounded-lg bg-transparent md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0 dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700">
@@ -111,7 +130,7 @@ export default function NavComp() {
                 <button
                   id="dropdownNavbarLink"
                   data-dropdown-toggle="dropdownNavbar"
-                  className="flex items-center justify-start w-full p-4 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 md:w-auto dark:text-white md:dark:hover:text-blue-500 dark:focus:text-white dark:border-gray-700 dark:hover:bg-gray-700 md:dark:hover:bg-transparent"
+                  className="flex items-center justify-start w-full p-4 text-gray-900 font-semibold rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 md:w-auto dark:text-white md:dark:hover:text-blue-500 dark:focus:text-white dark:border-gray-700 dark:hover:bg-gray-700 md:dark:hover:bg-transparent"
                   onClick={() => setShow(!show)}
                 >
                   BY THERAPY
@@ -162,8 +181,11 @@ export default function NavComp() {
               </li>
 
               <li>
-                <Link href="/consultation-rooms" className={handelClass("consultation-rooms")}>
-                CONSULTATION ROOMS
+                <Link
+                  href="/consultation-rooms"
+                  className={handelClass("consultation-rooms")}
+                >
+                  CONSULTATION ROOMS
                 </Link>
               </li>
               <li>

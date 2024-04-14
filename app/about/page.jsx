@@ -1,7 +1,7 @@
 
 const page = () => {
   return (
-    <div className="my-56">about</div>
+    <div className="font-bold uppercase text-4xl h-screen flex justify-center items-center text-blue-700">about page</div>
   )
 }
 

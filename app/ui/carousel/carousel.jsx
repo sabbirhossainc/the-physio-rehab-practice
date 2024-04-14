@@ -15,8 +15,8 @@ import "swiper/css/autoplay";
 export default function Page() {
   return (
     <>
-      <div className="my-28">
-        <div className="hidden lg:block absolute z-10 h-auto p-32 min-w-7xl bg-transparent text-gray-50 text-center top-40 lg:left-[4rem] md:left-[3rem] xl:left-[25rem] mx-auto">
+      <div className="mt-28 bg-gray-200">
+        <div className="hidden lg:block absolute z-10 h-auto p-32 min-w-7xl bg-transparent text-gray-50 text-center top-52 lg:left-[4rem] md:left-[3rem] xl:left-[25rem] mx-auto">
           <p className="font-bold text-3xl drop-shadow-xl">
             WELCOME TO THE GUILDHALL PRACTICE
           </p>
@@ -56,14 +56,15 @@ export default function Page() {
             },
           }}
           modules={[Autoplay, Navigation, Pagination]}
-          className="h-[30rem] w-full backdrop-brightness-50"
+          className="h-[36rem] w-full backdrop-brightness-50"
         >
           {images.map((image, index) => (
             <SwiperSlide key={index}>
                 <Image
                   src={image.src}
                   alt={image.alt}
-                  className="block h-[30rem] w-full object-cover"
+                  className="block h-[36rem] w-full object-cover"
+                  property="true"
                 />
                 <div className="absolute inset-0 bg-black opacity-50"/>
             </SwiperSlide>

@@ -13,22 +13,48 @@ export default function NavComp() {
   // handel show hide state for dropdown
   const [show, setShow] = useState(false);
 
-  function handleDropdown() {
-    setShow(!show);
-  }
+  // dropdown item
+  const data = [
+    {
+      id: "1",
+      href: "/osteopath",
+      path: "osteopath",
+      name: "OSTEOPATHY",
+    },
+    {
+      id: "2",
+      href: "/sports-massage",
+      path: "sports-massage",
+      name: "SPORTS MASSAGE",
+    },
+    {
+      id: "3",
+      href: "/acupuncture-birmingham",
+      path: "acupuncture-birmingham",
+      name: "ACUPUNCTURE BIRMINGHAM",
+    },
+    {
+      id: "4",
+      href: "/physiotherapist",
+      path: "physiotherapist",
+      name: "PHYSIOTHERAPY",
+    },
+  ];
 
+  // handel class for navbar
   const handelClass = (type = null) => {
     let staticClass =
       "block py-2 px-3 rounded text-gray-900 hover:text-blue-700 md:p-0";
     if (type === path) {
       staticClass -= "text-gray-900";
-      staticClass += " text-blue-700";
+      staticClass += " block py-2 px-3 rounded text-blue-700 hover:text-blue-700 md:p-0";
     } else {
       staticClass += "";
     }
     return staticClass;
   };
 
+  // handel class for navbar dropdown
   const handelClassDropdown = (type = null) => {
     let staticClassDropdown = "block px-4 py-2 hover:bg-gray-100 text-gray-900";
     if (type === path) {
@@ -40,6 +66,7 @@ export default function NavComp() {
     return staticClassDropdown;
   };
 
+  // Get outside mouse position except dropdown
   const outsideDetection = () => {
     const dropdownContainer = document.getElementById("dropdownContainer");
     const dropdownNavbar = document.getElementById("dropdownNavbar");
@@ -68,25 +95,26 @@ export default function NavComp() {
             <Image src={Logo} className="mr-3 w-44 h-20" alt="Logo" priority />
           </Link>
           <div
-            className="items-center justify-between hidden w-full md:flex md:w-auto md:order-1"
+            className="items-center justify-between w-full md:flex md:w-auto md:order-1"
             id="navbar-dropdown"
           >
             <ul className="flex flex-col p-4 md:p-0 mt-4 font-medium border border-gray-100 rounded-lg bg-gray-50 md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0 md:bg-white dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700">
               <li>
-                <Link href="/home" className={handelClass("home")}>
-                  Home
+                <Link href="/location" className={handelClass("location")}>
+                  LOCATION
                 </Link>
               </li>
-              {/* dropdown link */}
+
+              {/* dropdown Button */}
 
               <li id="dropdownContainer">
                 <button
                   id="dropdownNavbarLink"
                   data-dropdown-toggle="dropdownNavbar"
-                  className="flex items-center justify-center w-full p-4 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 md:w-auto dark:text-white md:dark:hover:text-blue-500 dark:focus:text-white dark:border-gray-700 dark:hover:bg-gray-700 md:dark:hover:bg-transparent"
-                  onClick={handleDropdown}
+                  className="flex items-center justify-start w-full p-4 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 md:w-auto dark:text-white md:dark:hover:text-blue-500 dark:focus:text-white dark:border-gray-700 dark:hover:bg-gray-700 md:dark:hover:bg-transparent"
+                  onClick={() => setShow(!show)}
                 >
-                  Dropdown
+                  BY THERAPY
                   <svg
                     className="w-2.5 h-2.5 ms-2.5"
                     aria-hidden="true"
@@ -103,6 +131,7 @@ export default function NavComp() {
                     />
                   </svg>
                 </button>
+
                 {/* <!-- Dropdown menu --> */}
                 <div
                   id="dropdownNavbar"
@@ -116,52 +145,35 @@ export default function NavComp() {
                     className="py-2 text-sm text-gray-700 dark:text-gray-400"
                     aria-labelledby="dropdownLargeButton"
                   >
-                    <li>
-                      <Link
-                        href="/home"
-                        className={handelClassDropdown("home")}
-                      >
-                        Dashboard
-                      </Link>
-                    </li>
-                    <li>
-                      <Link href="/set" className={handelClassDropdown("set")}>
-                        Settings
-                      </Link>
-                    </li>
-                    <li>
-                      <Link
-                        href="/earn"
-                        className={handelClassDropdown("earn")}
-                      >
-                        Earnings
-                      </Link>
-                    </li>
-                    <li>
-                      <Link
-                        href="/signout"
-                        className={handelClassDropdown("signout")}
-                      >
-                        Sign out
-                      </Link>
-                    </li>
+                    {data?.map((item, index) => (
+                      <span key={index}>
+                        <li>
+                          <Link
+                            href={item.href}
+                            className={handelClassDropdown(`${item.path}`)}
+                          >
+                            {item.name}
+                          </Link>
+                        </li>
+                      </span>
+                    ))}
                   </ul>
                 </div>
               </li>
 
               <li>
-                <Link href="/about" className={handelClass("about")}>
-                  About
+                <Link href="/consultation-rooms" className={handelClass("consultation-rooms")}>
+                CONSULTATION ROOMS
                 </Link>
               </li>
               <li>
-                <Link href="/serv" className={handelClass("serv")}>
-                  Services
+                <Link href="/about" className={handelClass("about")}>
+                  ABOUT
                 </Link>
               </li>
               <li>
                 <Link href="/contact" className={handelClass("contact")}>
-                  Contact
+                  CONTACT
                 </Link>
               </li>
             </ul>

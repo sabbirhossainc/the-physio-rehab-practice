@@ -1,5 +1,5 @@
 import { Inter } from "next/font/google";
-// import Navigation from "@/app/ui/navbar/navbar";
+import Navigation from "@/app/ui/navbar/navbar";
 import Footer from "@/app/ui/footer/footer";
 import "./globals.css";
 import "flowbite";
@@ -22,7 +22,7 @@ export default function RootLayout({ children }) {
         ></script>
       </head>
       <body className={inter.className}>
-        {/* <Navigation /> */}
+        <Navigation />
         {children}
         <Footer />
       </body>

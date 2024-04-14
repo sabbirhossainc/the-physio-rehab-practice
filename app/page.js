@@ -10,7 +10,7 @@ export default function Home() {
   return (
     <>
       <CarouselComp />
-      <Services />
+      {/* <Services /> */}
       <div className="flex flex-col items-center justify-between py-20">
         <Review suppressHydrationWarning={true}/>
       </div>

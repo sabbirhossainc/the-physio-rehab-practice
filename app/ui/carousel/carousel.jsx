@@ -3,7 +3,7 @@
 import Image from "next/image";
 
 import { Swiper, SwiperSlide } from "swiper/react";
-import {  Navigation, Pagination, Autoplay } from "swiper/modules";
+import { Navigation, Pagination, Autoplay } from "swiper/modules";
 
 import { images } from "@/lib/images";
 
@@ -56,17 +56,17 @@ export default function Page() {
             },
           }}
           modules={[Autoplay, Navigation, Pagination]}
-          className="h-[36rem] w-full backdrop-brightness-50"
+          className="h-[36rem] w-full"
         >
           {images.map((image, index) => (
             <SwiperSlide key={index}>
-                <Image
-                  src={image.src}
-                  alt={image.alt}
-                  className="block h-[36rem] w-full object-cover"
-                  property="true"
-                />
-                <div className="absolute inset-0 bg-black opacity-50"/>
+              <Image
+                src={image.src}
+                alt={image.alt}
+                className="block h-[36rem] w-full object-cover"
+                property="true"
+              />
+              <div className="absolute inset-0 bg-black opacity-50" />
             </SwiperSlide>
           ))}
         </Swiper>

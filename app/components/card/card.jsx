@@ -3,7 +3,7 @@ import Link from "next/link";
 
 const card = (props) => {
   return (
-    <div>
+    <div className="">
       <div className="max-w-sm bg-white rounded-lg shadow-gray-400 shadow-sm-light dark:bg-gray-800 dark:border-gray-700">
         <Link href="">
           <Image className="rounded-t-lg" src={props.url} alt={props.alt} />

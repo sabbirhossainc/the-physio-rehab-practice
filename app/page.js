@@ -1,5 +1,5 @@
 import CarouselComp from "@/app/ui/carousel/carousel";
-import Services from "@/app/ui/service/service";
+import Services from "@/app/ui/services/services";
 // import { Suspense } from "react";
 // import Review from '@/app/ui/review/review'
 

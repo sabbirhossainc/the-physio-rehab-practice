@@ -29,6 +29,7 @@ const footer = () => {
             </p>
           </div>
           <div className="flex-grow flex flex-wrap items-center justify-center md:pl-20 -mb-10 md:mt-0 mt-10 md:text-left text-center">
+            {/* Company section */}
             <div className="lg:w-1/4 md:w-1/2 w-full px-4 ml-auto">
               <h2 className="title-font font-medium text-white tracking-widest text-sm mb-3">
                 COMPANY
@@ -52,7 +53,7 @@ const footer = () => {
                 </li>
               </nav>
             </div>
-
+{/* Help center section */}
             <div className="lg:w-1/4 md:w-1/2 w-full px-4">
               <h2 className="title-font font-medium text-white tracking-widest text-sm mb-3">
                 HELP CENTER
@@ -78,7 +79,7 @@ const footer = () => {
                 </li>
               </nav>
             </div>
-
+{/* Legal section */}
             <div className="lg:w-1/4 md:w-1/2 w-full px-4">
               <h2 className="title-font font-medium text-white tracking-widest text-sm mb-3">
                 LEGAL

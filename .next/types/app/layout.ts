@@ -1,4 +1,4 @@
-// File: /home/shr/projects/the-physio-rehab-practice/app/layout.js
+// File: C:\Users\shr47\Desktop\the-physio-rehab-practice\app\layout.js
 import * as entry from '../../../app/layout.js'
 import type { ResolvingMetadata, ResolvingViewport } from 'next/dist/lib/metadata/types/metadata-interface.js'
 

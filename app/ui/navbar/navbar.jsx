@@ -18,9 +18,9 @@ export default function NavComp() {
   const data = [
     {
       id: "1",
-      href: "/osteopath",
-      path: "osteopath",
-      name: "OSTEOPATHY",
+      href: "/musculoskeletal",
+      path: "musculoskeletal",
+      name: "musculoskeletal",
     },
     {
       id: "2",
@@ -45,11 +45,11 @@ export default function NavComp() {
   // handel class for navbar
   const handelClass = (type = null) => {
     let staticClass =
-      "block py-2 px-3 rounded text-gray-900 hover:text-blue-700 font-semibold md:p-0";
+      "block py-2 px-3 rounded text-gray-900 hover:text-blue-700 font-semibold uppercase md:p-0";
     if (type === path) {
       staticClass -= "text-gray-900";
       staticClass +=
-        " block py-2 px-3 rounded text-blue-700 hover:text-blue-700 font-semibold md:p-0";
+        " block py-2 px-3 rounded text-blue-700 hover:text-blue-700 font-semibold uppercase md:p-0";
     } else {
       staticClass += "";
     }
@@ -58,10 +58,10 @@ export default function NavComp() {
 
   // handel class for navbar dropdown
   const handelClassDropdown = (type = null) => {
-    let staticClassDropdown = "block px-4 py-2 hover:bg-gray-100 text-gray-900 font-medium";
+    let staticClassDropdown = "block px-4 py-2 hover:bg-gray-100 text-gray-900 uppercase font-medium";
     if (type === path) {
       staticClassDropdown -= "text-gray-900";
-      staticClassDropdown += " block px-4 py-2 hover:bg-gray-100 text-blue-700 font-medium";
+      staticClassDropdown += " block px-4 py-2 hover:bg-gray-100 text-blue-700 uppercase font-medium";
     } else {
       staticClassDropdown += "";
     }
@@ -118,11 +118,11 @@ export default function NavComp() {
             id="navbar-dropdown"
           >
             <ul className="flex flex-col p-4 md:p-0 mt-2 font-medium border border-blue-500 rounded-lg bg-transparent md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0 dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700">
-              <li>
+              {/* <li>
                 <Link href="/location" className={handelClass("location")}>
                   LOCATION
                 </Link>
-              </li>
+              </li> */}
 
               {/* dropdown Button */}
 
@@ -133,7 +133,7 @@ export default function NavComp() {
                   className="flex items-center justify-start w-full p-4 text-gray-900 font-semibold rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 md:w-auto dark:text-white md:dark:hover:text-blue-500 dark:focus:text-white dark:border-gray-700 dark:hover:bg-gray-700 md:dark:hover:bg-transparent"
                   onClick={() => setShow(!show)}
                 >
-                  BY THERAPY
+                  WHAT WE TREAT
                   <svg
                     className="w-2.5 h-2.5 ms-2.5"
                     aria-hidden="true"
@@ -182,20 +182,20 @@ export default function NavComp() {
 
               <li>
                 <Link
-                  href="/consultation-rooms"
-                  className={handelClass("consultation-rooms")}
+                  href="/appointments"
+                  className={handelClass("appointments")}
                 >
-                  CONSULTATION ROOMS
+                  appointments
                 </Link>
               </li>
               <li>
-                <Link href="/about" className={handelClass("about")}>
-                  ABOUT
+                <Link href="/services" className={handelClass("services")}>
+                 SERVICES
                 </Link>
               </li>
               <li>
                 <Link href="/contact" className={handelClass("contact")}>
-                  CONTACT
+                  CONTACT US
                 </Link>
               </li>
             </ul>

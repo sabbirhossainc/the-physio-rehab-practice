@@ -18,6 +18,8 @@ module.exports = {
       // },
       colors: {
         "primary": "#5700AD",
+        "secondary":"#3F83F8",
+        "black":"#000000",
         "primary-bg": "#FCECFE",
         "secondary-bg": "#F7F8FA",
         "icon-bg": "#DEDEDE",

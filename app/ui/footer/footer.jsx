@@ -107,11 +107,11 @@ const footer = () => {
         <div className="bg-gray-800 bg-opacity-75">
           <div className="container mx-auto py-4 px-5 flex flex-wrap flex-col sm:flex-row">
             <p className="text-gray-400 text-sm text-center sm:text-left">
-              © 2024 the-physio-rehab-practice —
+              © 2024 the-physio-rehab-practice — Developed By
               <Link
                 href="https://github.com/sabbirhossainc"
                 rel="noopener noreferrer"
-                className="text-gray-500 ml-1"
+                className="text-secondary ml-1"
                 target="_blank"
               >
                 sabbirhossainc

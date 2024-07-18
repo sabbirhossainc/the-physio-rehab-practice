@@ -68,7 +68,7 @@ const consultationRooms = () => {
 
               <div class="sm:py-8 mt-4 pt-4 sm:mt-0 text-left">
                 <p class="text-lg first-letter:capitalize">
-                  For more information on treatment at Physio.co.uk, or to book
+                  For more information on treatment at thephysiorehabpractice.co.uk, or to book
                   an appointment please call{" "}
                   <span className="font-semibold">0330 088 7800.</span>
                 </p>

@@ -47,7 +47,7 @@ const page = () => {
 
               <div class="sm:py-8 mt-4 pt-4 sm:mt-0 text-center">
                 <p class="text-lg first-letter:capitalize">
-                  Your treatment at Physio.co.uk will be tailored to your
+                  Your treatment at thephysiorehabpractice.co.uk will be tailored to your
                   condition to promote recovery and improve functional
                   independence with everyday activities.
                 </p>

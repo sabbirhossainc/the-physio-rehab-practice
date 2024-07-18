@@ -55,7 +55,7 @@ const contact = () => {
                   Email Address
                 </h4>
                 <p className="text-base text-body-color dark:text-dark-6">
-                  info@yourdomain.com
+                  info@thephysiorehabpractice.co.uk
                 </p>
               </div>
             </div>

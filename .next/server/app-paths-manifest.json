@@ -1,7 +1,6 @@
 {
-  "/contact/page": "app/contact/page.js",
-  "/services/page": "app/services/page.js",
+  "/page": "app/page.js",
   "/musculoskeletal/page": "app/musculoskeletal/page.js",
-  "/not-found": "app/not-found.js",
+  "/services/page": "app/services/page.js",
   "/appointments/page": "app/appointments/page.js"
 }

@@ -1,12 +1,12 @@
 import { FiMail, FiPhoneCall } from "react-icons/fi";
 import { GoHome } from "react-icons/go";
-import BgArtTemplate from "../components/bgArtTemplate/BgArtTemplate";
+import BgArtTemplate from "../components/Templates/bgArtTemplate/BgArtTemplate";
 
 const contact = () => {
   return (
     <BgArtTemplate>
-        <div className="w-full px-4 my-10">
-          <span className="mb-4 block text-3xl md:text-5xl font-bold text-primary text-center">
+        <div className="flex flex-col w-full gap-4 px-4">
+          <span className=" block text-3xl md:text-5xl font-bold text-primary text-center">
             Contact Us
           </span>
           <div className="mb-12 max-w-[570px] lg:mb-0">
@@ -55,7 +55,7 @@ const contact = () => {
                   Email Address
                 </h4>
                 <p className="text-base text-body-color dark:text-dark-6">
-                  info@thephysiorehabpractice.co.uk
+                  info@{process.env.SITE_DOMAIN_NAME} 
                 </p>
               </div>
             </div>

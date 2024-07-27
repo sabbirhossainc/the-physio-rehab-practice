@@ -16,6 +16,7 @@ export default function Home() {
       <Suspense fallback={<ReviewListSkeleton />}>
         <Review suppressHydrationWarning={true}/>
       </Suspense>
+      {/* review */}
       <Testimonial/>
     </>
   );

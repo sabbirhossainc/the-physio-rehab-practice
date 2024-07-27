@@ -89,12 +89,12 @@ export default function NavComp() {
   return (
     <>
       <nav className="bg-gray-200 dark:bg-gray-900 fixed z-20 w-full top-0">
-        <div className="max-w-xs md:max-w-7xl flex flex-wrap items-center justify-between mx-auto p-2">
+        <div className="max-w-xs md:max-w-7xl flex flex-wrap items-center justify-between mx-auto">
           <div className="flex justify-between items-center gap-44">
             <Link href="/">
               <Image
                 src={Logo}
-                className="rounded-md w-full h-full py-2"
+                className="rounded-md w-auto h-32 py-2"
                 alt="Logo"
                 width={100}
                 height={100}
@@ -117,7 +117,7 @@ export default function NavComp() {
             }
             id="navbar-dropdown"
           >
-            <ul className="flex flex-col p-4 md:p-0 mt-2 font-medium border border-blue-500 rounded-lg bg-transparent md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0 dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700">
+            <ul className="flex flex-col md:py-8 mt-2 font-medium border border-blue-500 rounded-lg bg-transparent md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0 dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700">
               {/* <li>
                 <Link href="/location" className={handelClass("location")}>
                   LOCATION
@@ -130,7 +130,7 @@ export default function NavComp() {
                 <button
                   id="dropdownNavbarLink"
                   data-dropdown-toggle="dropdownNavbar"
-                  className="flex items-center justify-start w-full p-4 text-gray-900 font-semibold rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 md:w-auto dark:text-white md:dark:hover:text-blue-500 dark:focus:text-white dark:border-gray-700 dark:hover:bg-gray-700 md:dark:hover:bg-transparent"
+                  className="flex items-center justify-start w-full p-4 text-gray-900 font-semibold rounded-md md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 md:w-auto dark:text-white md:dark:hover:text-blue-500 dark:focus:text-white dark:border-gray-700 dark:hover:bg-gray-700 md:dark:hover:bg-transparent"
                   onClick={() => setShow(!show)}
                 >
                   WHAT WE TREAT

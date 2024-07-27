@@ -1,62 +1,55 @@
-import Image from "next/image";
-import BgArtTemplate from "../components/bgArtTemplate/BgArtTemplate";
+import { blogData } from "@/lib/blogData";
+import BgArtTemplate from "../components/Templates/bgArtTemplate/BgArtTemplate";
+import {
+  Blog,
+  BlogHeader,
+  BlogBody,
+  ImageContainer,
+} from "../components/Templates/blog/Blog";
 
 const page = () => {
-  return (
-    <>
-    <BgArtTemplate>
-    <div class="text-gray-600 body-font">
-          <div class="container px-1 py-24 mx-auto flex flex-col">
-            <div class="flex flex-col gap-8 lg:w-5/6 mx-auto">
-              <div class="rounded-lg h-80 overflow-hidden">
-                <Image
-                  alt="content"
-                  class="object-cover object-center h-full w-full"
-                  width={400}
-                  height={100}
-                  src="https://www.physio.co.uk/images/background/appointments-index.png"
-                />
-              </div>
-              <div class="flex flex-col sm:flex-row">
-                <div class="sm:w-1/3 text-center sm:pr-8 sm:py-8">
-                  <div class="flex flex-col items-center text-center justify-center">
-                    <h2 class="font-medium title-font mt-4 text-gray-900 text-lg capitalize">
-                    Appointments
-                    </h2>
-                    <div class="w-16 h-1 bg-primary rounded mt-2 mb-4"></div>
-                    <p class="text-base">
-                      Book appointments at thephysiorehabpractice.co.uk
-                    </p>
-                  </div>
-                </div>
-                <div class="flex justify-center items-center sm:w-2/3 sm:pl-8 sm:py-8 sm:border-l border-primary sm:border-t-0 border-t mt-4 pt-4 sm:mt-0 text-left">
-                  <p class="text-lg first-letter:capitalize mb-4">
-                    thephysiorehabpractice.co.uk, provide quick, flexible appointments, either in one of our modern clinics or within the comfort of your home.
-                  </p>
-                </div>
-              </div>
-              <div class="rounded-lg h-80 overflow-hidden">
-                <Image
-                  alt="content"
-                  class="rounded-lg object-cover object-bottom h-full w-full"
-                  width={400}
-                  height={100}
-                  src="https://www.physio.co.uk/images/appointments/appointments.jpg"
-                />
-              </div>
+  const filterByBlog = (blog) => {
+    const targetBlog = blog.blogheading.blogTitle.includes("appointments");
+    if (targetBlog) {
+      return true;
+    }
+  };
 
-              <div class="sm:py-8 mt-4 pt-4 sm:mt-0 text-center">
-                <p class="text-lg first-letter:capitalize">
-                  Your treatment at thephysiorehabpractice.co.uk will be tailored to your
-                  condition to promote recovery and improve functional
-                  independence with everyday activities.
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
+  return (
+    <BgArtTemplate>
+      {blogData?.filter(filterByBlog)?.map((blog, index) => (
+        <Blog key={index}>
+          {/* Blog Image0 */}
+          <ImageContainer
+            src={blog.imginfo0.src}
+            alt={blog.imginfo0.alt}
+            addClass={blog.imginfo0.addClass}
+            width={blog.imginfo0.width}
+            height={blog.imginfo0.height}
+          />
+          {/* Blog Header */}
+          <BlogHeader
+            blogTitle={blog.blogheading.blogTitle}
+            blogSubTitle={blog.blogheading.blogSubTitle}
+            addClass={blog.blogheading.addClass}
+          >
+            {blog.blogheading.body}
+          </BlogHeader>
+          {/* Blog Image1 */}
+          <ImageContainer
+            src={blog.imginfo1.src}
+            alt={blog.imginfo1.alt}
+            addClass={blog.imginfo1.addClass}
+            width={blog.imginfo1.width}
+            height={blog.imginfo1.height}
+          />
+          {/* Blog Body */}
+          {blog?.blogbody?.paras?.map((bodypara, index) => (
+            <BlogBody key={index}>{bodypara.para}</BlogBody>
+          ))}
+        </Blog>
+      ))}
     </BgArtTemplate>
-    </>
   );
 };
 

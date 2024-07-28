@@ -1,23 +1,40 @@
 import Link from "next/link";
 import { FaArrowRightLong } from "react-icons/fa6";
 
-export const LinkBtn = ({ linkText, href }) => {
+export const LinkBtn = ({ linkText, href, onClick }) => {
   return (
     <>
-      <Link href={href}>
-        <div class="h-full flex items-center border-primary border justify-evenly gap-4 px-4 py-2 rounded-lg hover:bg-primary/10 cursor-pointer hover:border-none">
-          <div className="flex-grow">
-            <h2 class="text-primary title-font font-bold">{linkText}</h2>
+      {href ? (
+        <Link href={href}>
+          <div className="h-full flex items-center border-primary border justify-evenly gap-4 px-4 py-2 rounded-lg hover:bg-primary/10 cursor-pointer hover:border-none">
+            <div className="flex-grow">
+              <h2 className="text-primary title-font font-bold">{linkText}</h2>
+            </div>
+            <div className="w-auto h-auto p-3 justify-center items-center flex rounded-full">
+              <FaArrowRightLong
+                className="text-2xl text-primary"
+                width={300}
+                height={100}
+              />
+            </div>
           </div>
-          <div className="w-auto h-auto p-3 justify-center items-center flex rounded-full">
-            <FaArrowRightLong
-              className="text-2xl text-primary"
-              width={300}
-              height={100}
-            />
+        </Link>
+      ) : (
+        <div onClick={onClick}>
+          <div className="h-full flex items-center border-primary border justify-evenly gap-4 px-4 py-2 rounded-lg hover:bg-primary/10 cursor-pointer hover:border-none">
+            <div className="flex-grow">
+              <h2 className="text-primary title-font font-bold">{linkText}</h2>
+            </div>
+            <div className="w-auto h-auto p-3 justify-center items-center flex rounded-full">
+              <FaArrowRightLong
+                className="text-2xl text-primary"
+                width={300}
+                height={100}
+              />
+            </div>
           </div>
         </div>
-      </Link>
+      )}
     </>
   );
 };
@@ -25,7 +42,7 @@ export const LinkBtn = ({ linkText, href }) => {
 export const LinkGroup = ({ children }) => {
   return (
     <>
-      <div class="flex flex-wrap -m-2 mb-10">{children}</div>
+      <div className="flex flex-wrap -m-2 mb-10">{children}</div>
     </>
   );
 };

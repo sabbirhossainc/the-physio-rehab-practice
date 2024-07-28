@@ -2,9 +2,9 @@
 
 import Logo from "@/public/logo-1.png";
 import Image from "next/image";
-import { useEffect, useState } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+import { useEffect, useState } from "react";
 
 export default function NavComp() {
   // Get Current Path
@@ -42,7 +42,7 @@ export default function NavComp() {
     },
   ];
 
-  // handel class for navbar
+  // handel className for navbar
   const handelClass = (type = null) => {
     let staticClass =
       "block py-2 px-3 rounded text-gray-900 hover:text-blue-700 font-semibold uppercase md:p-0";
@@ -56,7 +56,7 @@ export default function NavComp() {
     return staticClass;
   };
 
-  // handel class for navbar dropdown
+  // handel className for navbar dropdown
   const handelClassDropdown = (type = null) => {
     let staticClassDropdown = "block px-4 py-2 hover:bg-gray-100 text-gray-900 uppercase font-medium";
     if (type === path) {

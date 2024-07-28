@@ -6,8 +6,8 @@ const BgArtTemplate = ({ children }) => {
           <div className=" flex flex-wrap lg:justify-between">
             <div className="w-full">
               <div className="relative rounded-lg bg-primary-bg p-4 shadow-lg dark:bg-dark-2">
-                <div class="text-gray-600 body-font">
-                  <div class="container px-1 py-24 mx-auto flex flex-col gap-8">
+                <div className="text-gray-600 body-font">
+                  <div className="container px-1 py-24 mx-auto flex flex-col gap-8">
                     {children}
                   </div>
                 </div>

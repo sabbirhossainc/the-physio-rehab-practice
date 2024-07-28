@@ -1,17 +1,13 @@
 import { blogData } from "@/lib/blogData";
-import BgArtTemplate from "@/app/components/Templates/bgArtTemplate/BgArtTemplate";
+import BgArtTemplate from "@/Templates/bgArtTemplate/BgArtTemplate";
 import {
   Blog,
   BlogHeader,
   BlogFooter,
   BlogBody,
   ImageContainer,
-} from "@/app/components/Templates/blog/Blog";
-import {
-  LinkGroup,
-  Links,
-  LinkBtn,
-} from "@/app/components/Templates/linkGroup/LinkGroup";
+} from "@/Templates/blog/Blog";
+import { LinkGroup, Links, LinkBtn } from "@/Templates/linkGroup/LinkGroup";
 import { notFound } from "next/navigation";
 
 const page = ({ params }) => {
@@ -24,10 +20,10 @@ const page = ({ params }) => {
     }
   };
 
-  const flug = blogData?.filter(filterByBlog)
+  const flug = blogData?.filter(filterByBlog);
 
   if (flug.length == 0) {
-    notFound()
+    notFound();
   }
 
   return (

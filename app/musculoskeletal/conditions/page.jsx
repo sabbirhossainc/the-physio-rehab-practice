@@ -1,17 +1,13 @@
 import { blogData } from "@/lib/blogData";
-import BgArtTemplate from "@/app/components/Templates/bgArtTemplate/BgArtTemplate";
+import BgArtTemplate from "@/Templates/bgArtTemplate/BgArtTemplate";
 import {
   Blog,
   BlogHeader,
   BlogFooter,
   BlogBody,
   ImageContainer,
-} from "@/app/components/Templates/blog/Blog";
-import {
-  LinkGroup,
-  Links,
-  LinkBtn,
-} from "@/app/components/Templates/linkGroup/LinkGroup";
+} from "@/Templates/blog/Blog";
+import { LinkGroup, Links, LinkBtn } from "@/Templates/linkGroup/LinkGroup";
 
 const page = () => {
   const filterByBlog = (blog) => {
@@ -42,9 +38,7 @@ const page = () => {
           </BlogHeader>
 
           {/* Blog Links */}
-          <BlogBody>
-            {blog?.linkheading}
-          </BlogBody>
+          <BlogBody>{blog?.linkheading}</BlogBody>
           <LinkGroup>
             {blog?.links?.map((link, index) => (
               <Links key={index}>

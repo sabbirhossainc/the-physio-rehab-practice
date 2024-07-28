@@ -1,7 +1,8 @@
-import Navigation from "@/app/ui/navbar/navbar";
-import Footer from "@/app/ui/footer/footer";
 import "./globals.css";
 import "flowbite";
+import Navigation from "@/ui/navbar/navbar";
+import Footer from "@/ui/footer/footer";
+import BackToTop from "@/ui/backToTop/backToTop";
 
 
 export const metadata = {
@@ -22,6 +23,7 @@ export default function RootLayout({ children }) {
       <body className={"font-sans"}>
         <Navigation />
         {children}
+        <BackToTop/>
         <Footer />
       </body>
     </html>

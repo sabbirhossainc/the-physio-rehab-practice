@@ -1,13 +1,12 @@
-import Image from "next/image";
 import { blogData } from "@/lib/blogData";
-import BgArtTemplate from "../components/Templates/bgArtTemplate/BgArtTemplate";
+import BgArtTemplate from "@/Templates/bgArtTemplate/BgArtTemplate";
 import {
   Blog,
   BlogHeader,
   BlogBody,
   BlogFooter,
   ImageContainer,
-} from "../components/Templates/blog/Blog";
+} from "@/Templates/blog/Blog";
 
 const page = () => {
   const filterByBlog = (blog) => {

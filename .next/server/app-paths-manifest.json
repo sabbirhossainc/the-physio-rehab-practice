@@ -1,5 +1,4 @@
 {
-  "/musculoskeletal/page": "app/musculoskeletal/page.js",
-  "/musculoskeletal/conditions/page": "app/musculoskeletal/conditions/page.js",
-  "/musculoskeletal/conditions/[slug]/page": "app/musculoskeletal/conditions/[slug]/page.js"
+  "/appointments/page": "app/appointments/page.js",
+  "/page": "app/page.js"
 }

@@ -9,7 +9,13 @@ const nextConfig = {
         protocol: "https",
         hostname: "www.physio.co.uk",
         port: "",
-        pathname: "/images/**",
+        // pathname: "/images/**",
+      },
+      {
+        protocol: "https",
+        hostname: "res.cloudinary.com",
+        port: "",
+        // pathname: "/images/**",
       },
       {
         protocol: "https",

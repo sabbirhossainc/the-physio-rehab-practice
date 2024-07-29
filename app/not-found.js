@@ -1,12 +1,9 @@
-"use client";
-import Link from "next/link";
-import { useRouter } from "next/navigation";
+import { BackBtn, HomeBtn } from "./ui/buttons/buttons";
 import { GoHome } from "react-icons/go";
 import { IoArrowBackOutline } from "react-icons/io5";
 import BgArtTemplate from "./components/Templates/bgArtTemplate/BgArtTemplate";
 
 export default function NotFound() {
-  const router = useRouter();
   return (
     <BgArtTemplate>
       <div className="flex items-center justify-center w-full text-gray-900 my-12 px-4">
@@ -22,20 +19,14 @@ export default function NotFound() {
             been moved to another URL. Please go to back.
           </p>
           <div className="flex flex-row justify-between gap-8">
-            <button
-              onClick={router.back}
-              className="flex justiy-center items-center gap-2 px-5 py-2 text-xl rounded-md text-black border border-secondary hover:bg-secondary hover:text-white"
-            >
-              <IoArrowBackOutline height={100} width={100} />
+            <BackBtn>
+              <IoArrowBackOutline />
               Previous Page
-            </button>
-            <Link
-              href={"/"}
-              className="flex justiy-center items-center gap-2 px-5 py-2 text-xl rounded-md text-black border border-primary hover:bg-primary hover:text-white"
-            >
-              <GoHome height={100} width={100} />
+            </BackBtn>
+            <HomeBtn>
+              <GoHome />
               Home Page
-            </Link>
+            </HomeBtn>
           </div>
         </div>
       </div>

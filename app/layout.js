@@ -2,13 +2,13 @@ import "./globals.css";
 import "flowbite";
 import Navigation from "@/ui/navbar/navbar";
 import Footer from "@/ui/footer/footer";
-import BackToTop from "@/ui/backToTop/backToTop";
-
+import Marquee from "./ui/marquee/marquee";
+import { BackToTop } from "@/ui/buttons/buttons";
 
 export const metadata = {
   title: "The physio rehab practice",
   description: "physiotherapy clinic",
-};  
+};
 
 export default function RootLayout({ children }) {
   return (
@@ -23,7 +23,8 @@ export default function RootLayout({ children }) {
       <body className={"font-sans"}>
         <Navigation />
         {children}
-        <BackToTop/>
+        <BackToTop />
+        <Marquee/>
         <Footer />
       </body>
     </html>

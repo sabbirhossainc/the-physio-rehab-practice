@@ -1,14 +1,14 @@
 "use client";
 
-import Image from "next/image";
-import { Swiper, SwiperSlide } from "swiper/react";
-import { Navigation, Pagination, Autoplay } from "swiper/modules";
 import { images } from "@/lib/images";
+import Image from "next/image";
+import { Autoplay, Navigation, Pagination } from "swiper/modules";
+import { Swiper, SwiperSlide } from "swiper/react";
 
 import "swiper/css";
+import "swiper/css/autoplay";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
-import "swiper/css/autoplay";
 
 export default function Page() {
   return (
@@ -16,16 +16,16 @@ export default function Page() {
       <div className="mt-28 bg-gray-200">
         {/* hero Title */}
         <div className="hidden lg:block absolute z-10 h-auto p-32 min-w-7xl bg-transparent text-gray-50 text-center top-52 lg:left-[4rem] md:left-[3rem] xl:left-[25rem] mx-auto">
-          <p className="font-bold text-3xl drop-shadow-xl">
-            WELCOME TO THE GUILDHALL PRACTICE
+          <p className="font-bold text-4xl drop-shadow-xl uppercase">
+            wellcome to The physio rehab practice
           </p>
           <br />
-          <p className="font-medium text-xl drop-shadow-xl">
+          <p className="font-medium text-lg drop-shadow-xl">
             A MULTI-DISCIPLINARY GROUP PRACTICE OFFERING OSTEOPATHY,
             PHYSIOTHERAPY
           </p>
-          <p className="font-medium text-xl drop-shadow-xl subtitle">
-            AND SPORTS MASSAGE IN BIRMINGHAM.
+          <p className="font-medium text-lg drop-shadow-xl subtitle">
+             IN BIRMINGHAM.
           </p>
         </div>
         <Swiper
@@ -34,7 +34,7 @@ export default function Page() {
           pagination={{ clickable: true }}
           loop={true}
           autoplay={{
-            delay: 3000,
+            delay: 5000,
             disableOnInteraction: false,
           }}
           breakpoints={{

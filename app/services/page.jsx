@@ -1,4 +1,4 @@
-import { blogData } from "@/lib/blogData";
+import getAllBlogs from "@/lib/getAllBlogs/getAllBlogs";
 import BgArtTemplate from "@/Templates/bgArtTemplate/BgArtTemplate";
 import {
   Blog,
@@ -8,7 +8,34 @@ import {
   ImageContainer,
 } from "@/Templates/blog/Blog";
 
-const page = () => {
+export async function generateMetadata() {
+  const blogData = await getAllBlogs();
+
+  const filterByBlog = (blog) => {
+    const targetBlog = blog.blogheading.blogTitle.includes("services");
+    if (targetBlog) {
+      return true;
+    } else {
+      return false;
+    }
+  };
+
+  const title = blogData
+    ?.filter(filterByBlog)
+    .map((blog) => blog.blogheading.blogTitle)[0];
+
+  const description = blogData
+    ?.filter(filterByBlog)
+    .map((blog) => blog.blogheading.body)[0];
+
+  return {
+    title: title.toUpperCase(),
+    description: description,
+  };
+}
+
+export default async function page() {
+  const blogData = await getAllBlogs();
   const filterByBlog = (blog) => {
     const targetBlog = blog.blogheading.blogTitle.includes("services");
     if (targetBlog) {
@@ -56,6 +83,4 @@ const page = () => {
       ))}
     </BgArtTemplate>
   );
-};
-
-export default page;
+}

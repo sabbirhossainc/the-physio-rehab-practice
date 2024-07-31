@@ -13,9 +13,9 @@ export default function Home() {
       <CarouselComp />
       <Services />
       {/* review */}
-      {/* <Suspense fallback={<ReviewListSkeleton />}>
+      <Suspense fallback={<ReviewListSkeleton />}>
         <Review suppressHydrationWarning={true}/>
-      </Suspense> */}
+      </Suspense>
       {/* review */}
       <Testimonial />
     </>

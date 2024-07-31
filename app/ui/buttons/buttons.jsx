@@ -88,3 +88,11 @@ export const LearnMoreBtn = ({ btnText,href }) => {
     </>
   );
 };
+
+export const GlobalBtn = ({btnText,onclick}) =>{
+  return (
+    <>
+    <button className="flex justiy-center items-center gap-2 px-3 py-2 text-base rounded-md text-black border border-primary hover:bg-primary hover:text-white" onClick={ onclick }>{btnText}</button>
+    </>
+  )
+}

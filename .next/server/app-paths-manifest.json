@@ -1,4 +1,9 @@
 {
+  "/musculoskeletal/page": "app/musculoskeletal/page.js",
   "/appointments/page": "app/appointments/page.js",
+  "/musculoskeletal/[slug]/page": "app/musculoskeletal/[slug]/page.js",
+  "/services/page": "app/services/page.js",
+  "/contact/page": "app/contact/page.js",
+  "/favicon.ico/route": "app/favicon.ico/route.js",
   "/page": "app/page.js"
 }

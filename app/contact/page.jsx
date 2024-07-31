@@ -2,6 +2,15 @@ import { FiMail, FiPhoneCall } from "react-icons/fi";
 import { GoHome } from "react-icons/go";
 import BgArtTemplate from "@/Templates/bgArtTemplate/BgArtTemplate";
 
+export async function generateMetadata() {
+  const title = "contact" ;
+  const description = "contact us" ;
+  return {
+    title: title.toUpperCase(),
+    description: description,
+  };
+}
+
 const contact = () => {
   return (
     <BgArtTemplate>

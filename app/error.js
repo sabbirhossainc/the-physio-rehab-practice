@@ -1,6 +1,8 @@
 "use client"; // Error components must be Client Components
 
 import { useEffect } from "react";
+import BgArtTemplate from "./components/Templates/bgArtTemplate/BgArtTemplate";
+import { GlobalBtn } from "./ui/buttons/buttons";
 
 export default function Error({ error, reset }) {
   useEffect(() => {
@@ -9,20 +11,13 @@ export default function Error({ error, reset }) {
   }, [error]);
 
   return (
-    <div className="flex items-center justify-center h-screen">
-    <div className="container text-center">
-      <h2 className="justify-center flex items-center text-3xl text-red-300">
-        Something went wrong!
-      </h2>
-      <button
-        onClick={
-          // Attempt to recover by trying to re-render the segment
-          () => reset()
-        }
-      >
-        Try again
-      </button>
-    </div>
-    </div>
+    <BgArtTemplate>
+      <div className="flex flex-col gap-3 items-center justify-center">
+          <h2 className="justify-center flex items-center text-3xl text-red-500">
+            Something went wrong!
+          </h2>
+          <GlobalBtn btnText={"Try again"} onclick={()=>reset()}/>
+      </div>
+    </BgArtTemplate>
   );
 }

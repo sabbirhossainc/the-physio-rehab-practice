@@ -1,12 +1,7 @@
 {
-  "/_not-found": "app/_not-found.js",
   "/appointments/page": "app/appointments/page.js",
-  "/favicon.ico/route": "app/favicon.ico/route.js",
-  "/musculoskeletal/conditions/[slug]/page": "app/musculoskeletal/conditions/[slug]/page.js",
-  "/musculoskeletal/conditions/page": "app/musculoskeletal/conditions/page.js",
-  "/musculoskeletal/page": "app/musculoskeletal/page.js",
   "/page": "app/page.js",
-  "/contact/page": "app/contact/page.js",
-  "/services/page": "app/services/page.js",
-  "/musculoskeletal/[slug]/page": "app/musculoskeletal/[slug]/page.js"
+  "/what-we-treat/page": "app/what-we-treat/page.js",
+  "/what-we-treat/[slug]/page": "app/what-we-treat/[slug]/page.js",
+  "/not-found": "app/not-found.js"
 }

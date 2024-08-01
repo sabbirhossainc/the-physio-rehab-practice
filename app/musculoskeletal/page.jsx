@@ -65,14 +65,14 @@ export default async function page() {
           </BlogHeader>
 
           {/* Blog Links */}
-          <BlogBody>{blog?.linkheading}</BlogBody>
+          {/* <BlogBody>{blog?.linkheading}</BlogBody>
           <LinkGroup>
             {blog?.links?.map((link, index) => (
               <Links key={index}>
                 <LinkBtn linkText={link.linkbtn} href={link.linkhref} />
               </Links>
             ))}
-          </LinkGroup>
+          </LinkGroup> */}
           {/* Blog Image1 */}
           <ImageContainer
             src={blog.imginfo1.src}

@@ -2,7 +2,7 @@
 
 import { useEffect } from "react";
 import BgArtTemplate from "./components/Templates/bgArtTemplate/BgArtTemplate";
-import { GlobalBtn } from "./ui/buttons/buttons";
+import { GlobalBtn } from "./components/buttons/buttons";
 
 export default function Error({ error, reset }) {
   useEffect(() => {

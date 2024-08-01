@@ -2,8 +2,8 @@ import "./globals.css";
 import "flowbite";
 import Navigation from "@/ui/navbar/navbar";
 import Footer from "@/ui/footer/footer";
-import Marquee from "./ui/marquee/marquee";
-import { BackToTop } from "@/ui/buttons/buttons";
+import Marquee from "@/ui/marquee/marquee";
+import { BackToTop } from "@/app/components/buttons/buttons";
 
 export const metadata = {
   title: "The physio rehab practice",

@@ -3,7 +3,7 @@ import Image from "next/image";
 export const Blog = ({ children }) => {
   return (
     <>
-      <div className="flex flex-col gap-8 lg:w-5/6 mx-auto">{children}</div>
+      <div className="flex flex-col gap-8 w-full lg:w-5/6 mx-auto">{children}</div>
     </>
   );
 };

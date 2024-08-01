@@ -1,6 +1,7 @@
 import { FiMail, FiPhoneCall } from "react-icons/fi";
 import { GoHome } from "react-icons/go";
 import BgArtTemplate from "@/Templates/bgArtTemplate/BgArtTemplate";
+import { Blog } from "../components/Templates/blog/Blog";
 
 export async function generateMetadata() {
   const title = "contact" ;
@@ -14,7 +15,8 @@ export async function generateMetadata() {
 const contact = () => {
   return (
     <BgArtTemplate>
-      <div className="flex flex-col w-full gap-4 px-4">
+      <Blog>
+      <div className="flex flex-col w-full gap-8">
         <span className=" block text-3xl md:text-5xl font-bold text-primary text-center">
           Contact Us
         </span>
@@ -70,6 +72,7 @@ const contact = () => {
           </div>
         </div>
       </div>
+      </Blog>
     </BgArtTemplate>
   );
 };

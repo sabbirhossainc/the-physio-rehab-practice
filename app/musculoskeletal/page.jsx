@@ -45,7 +45,7 @@ export default async function page() {
   };
 
   return (
-    <BgArtTemplate>
+    <BgArtTemplate bread={true}>
       {blogData?.filter(filterByBlog)?.map((blog, index) => (
         <Blog key={index}>
           {/* Blog Image0 */}

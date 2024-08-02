@@ -1,9 +1,9 @@
 import Image from "next/image";
 
-export const Blog = ({ children }) => {
+export const Blog = ({ children,id }) => {
   return (
     <>
-      <div className="flex flex-col gap-8 w-full lg:w-5/6 mx-auto">{children}</div>
+      <div className="flex flex-col gap-8 w-full lg:w-5/6 mx-auto scroll-mt-40" id={id}>{children}</div>
     </>
   );
 };
@@ -72,10 +72,10 @@ export const BlogFooter = ({ children, focus, addClass }) => {
   );
 };
 
-export const ImageContainer = ({ addClass, src, width, height, alt }) => {
+export const ImageContainer = ({ divClass,addClass, src, width, height, alt }) => {
   return (
     <>
-      <div className="rounded-lg h-80 overflow-hidden">
+      <div className={divClass != undefined && divClass != ""? `${divClass}` : "rounded-lg h-80 overflow-hidden"}>
         <Image
           alt={alt != undefined && alt != "" ? `${alt}` : `content`}
           className={

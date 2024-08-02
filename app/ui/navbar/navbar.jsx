@@ -63,7 +63,7 @@ export default function NavComp() {
 
   return (
     <>
-      <nav className="bg-gray-200 dark:bg-gray-900 fixed z-20 w-full top-0">
+      <nav className="bg-gray-200 dark:bg-gray-900 fixed z-50 w-full top-0">
         <div className="max-w-xs md:max-w-7xl flex flex-wrap items-center justify-between mx-auto">
           <div className="flex justify-between items-center gap-44">
             <Link href="/">

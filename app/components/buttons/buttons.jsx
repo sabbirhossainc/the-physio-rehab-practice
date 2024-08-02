@@ -89,6 +89,19 @@ export const LearnMoreBtn = ({ btnText,href }) => {
   );
 };
 
+export const DropDownBtn = ({ btnText,href }) => {
+  return (
+    <>
+      <Link href={href} className="absolute bottom-0 text-secondary inline-flex items-center">
+        {btnText}
+        <div className="rotate-180">
+        <IoIosArrowUp className="text-3xl h-12 md:h-16 w-12 md:w-16 p-3 md:p-4 animate-bounce" />
+        </div>
+      </Link>
+    </>
+  );
+};
+
 export const GlobalBtn = ({btnText,onclick}) =>{
   return (
     <>

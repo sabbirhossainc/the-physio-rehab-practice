@@ -5,6 +5,8 @@
 :root {
   --foreground-rgb: 0, 0, 0;
   --background-rgb: 245, 205, 225;
+  --primary: #5700AD;
+  --secondary: #3F83F8;
 }
 
 body {
@@ -43,3 +45,52 @@ body {
 }
 
 /* Marquee styles */
+
+/* article style */
+
+.article-title{
+  font-weight: 700;
+  font-size:xx-large;
+  color: var(--primary);
+  text-decoration: underline;
+}
+
+.faq-items{
+  padding: 10px 0px;
+}
+
+.faq-items h3{
+  font-size: x-large;
+  color: var(--secondary);
+}
+
+.faq-items p{
+  padding: 5px 0;
+}
+
+.faqlist{
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+/* article style */
+
+/*  */
+
+.hero-img{
+  height: 650px;
+  overflow: hidden;
+  background-size: cover;
+}
+.hero-img::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0,0,0,0.5);/* Black background with opacity */
+}
+
+/*  */

@@ -1,16 +1,16 @@
 import Breadcrumb from "@/ui/breadcrumb/breadcrumb";
 
-const BgArtTemplate = ({ children }) => {
+const BgArtTemplate = ({ children, bread, top }) => {
   return (
     <>
-      <div className="relative z-10 overflow-hidden bg-gray-50 dark:bg-black py-40 lg:py-60">
+      <div className={`relative z-10 overflow-hidden bg-gray-50 dark:bg-black pb-24 md:pb-32 ${top? "pt-24 lg:pt-32" : 'pt-40 md:pt-60'}`} >
         <div className="container max-w-7xl mx-auto">
-          <div className="flex flex-wrap lg:justify-between">
+          <div className="flex flex-wrap md:justify-between">
             <div className="w-full">
-              <div className="relative rounded-lg bg-primary-bg py-8 shadow-lg dark:bg-dark-2">
+              <div className="relative rounded-lg bg-primary-bg py-8 px-4 shadow-lg dark:bg-dark-2">
                 <div className="text-gray-600 body-font">
                   <div className="container mx-auto flex flex-col justify-between gap-8">
-                    <Breadcrumb />
+                    {bread ? null : <Breadcrumb />}
                     {children}
                   </div>
                 </div>

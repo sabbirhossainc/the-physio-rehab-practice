@@ -1,4 +1,4 @@
-import Card from "@/app/components/card/Card";
+import Card from "@/app/components/card/card";
 
 import { data } from "@/lib/cardData";
 

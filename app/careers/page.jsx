@@ -1,8 +1,8 @@
 // import getFaqs from "@/lib/getFaqs/getFaqs";
-import BgArtTemplate from "../components/Templates/bgArtTemplate/BgArtTemplate";
-import { Blog, ImageContainer } from "../components/Templates/blog/Blog";
-import { DropDownBtn } from "../components/buttons/Buttons";
-import { HeroText } from "../components/texts/texts";
+import { DropDownBtn } from "@/app/components/buttons/Buttons";
+import { HeroText } from "@/app/components/texts/texts";
+import BgArtTemplate from "@/Templates/bgArtTemplate/BgArtTemplate";
+import { Blog, ImageContainer } from "@/Templates/blog/Blog";
 
 export default async function page() {
   //   const faqData = await getFaqs();

@@ -1,7 +1,7 @@
 import CarouselComp from "@/ui/carousel/carousel";
 import Services from "@/ui/services/services";
 import Testimonial from "@/ui/testimonial/testimonial";
-import ReviewListSkeleton from "@/app/components/skeleton/skeleton";
+import ReviewListSkeleton from "@/app/components/skeleton/Skeleton";
 
 import { Suspense } from "react";
 import dynamic from "next/dynamic";

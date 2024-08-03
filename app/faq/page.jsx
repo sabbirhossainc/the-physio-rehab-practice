@@ -1,7 +1,8 @@
 import getFaqs from "@/lib/getFaqs/getFaqs";
 import BgArtTemplate from "../components/Templates/bgArtTemplate/BgArtTemplate";
 import { Blog, ImageContainer } from "../components/Templates/blog/Blog";
-import { DropDownBtn } from "../components/buttons/buttons";
+import { DropDownBtn } from "../components/buttons/Buttons";
+import { HeroText } from "../components/texts/texts";
 
 export default async function page() {
   const faqData = await getFaqs();
@@ -10,15 +11,15 @@ export default async function page() {
       <div className="hero-part">
         <ImageContainer
           src={
-            "https://img.freepik.com/free-photo/doctor-helping-boy-physiotherapy-medium-shot_23-2149047465.jpg?t=st=1722619869~exp=1722623469~hmac=c006c0da51a7c1ae5cb9619c6c2a409090cf9d2bbb774c69371e3ee365db8448&w=1380"
+            "https://www.physio.co.uk/images/background/our-commitment-to-you.png"
           }
-          divClass={"hero-img"}
+          divClass={"hero-img blurdataurl"}
           addClass={"object-cover object-top"}
         />
         <div className="z-20 relative flex items-center justify-center text-center w-full ">
-          <p className="absolute bottom-64 text-7xl font-semibold text-white">
-            Faq's
-          </p>
+          <HeroText>
+            faq's
+          </HeroText>
           <DropDownBtn href={"#faq-content"} />
         </div>
       </div>

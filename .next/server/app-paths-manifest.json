@@ -1,9 +1,7 @@
 {
-  "/faq/page": "app/faq/page.js",
+  "/appointments/page": "app/appointments/page.js",
   "/careers/page": "app/careers/page.js",
   "/contact/page": "app/contact/page.js",
-  "/appointments/page": "app/appointments/page.js",
-  "/musculoskeletal/page": "app/musculoskeletal/page.js",
-  "/what-we-treat/page": "app/what-we-treat/page.js",
-  "/what-we-treat/[slug]/page": "app/what-we-treat/[slug]/page.js"
+  "/what-we-treat/[slug]/page": "app/what-we-treat/[slug]/page.js",
+  "/faq/page": "app/faq/page.js"
 }

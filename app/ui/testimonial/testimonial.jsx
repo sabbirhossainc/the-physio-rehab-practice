@@ -1,6 +1,6 @@
 import React from 'react'
 
-const testimonial = () => {
+const Testimonial = () => {
   return (
     <div className='bg-gray-200'> <div className="container px-5 py-24 mx-auto">
     <div className="flex flex-wrap -m-4">
@@ -36,4 +36,4 @@ const testimonial = () => {
   )
 }
 
-export default testimonial
+export default Testimonial

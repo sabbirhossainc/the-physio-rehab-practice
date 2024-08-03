@@ -1,8 +1,8 @@
-import Card from "@/app/components/card/card";
+import Card from "@/app/components/card/Card";
 
 import { data } from "@/lib/cardData";
 
-const service = () => {
+const Service = () => {
   return (
     <>
       <div className=" bg-gray-200 ">
@@ -25,4 +25,4 @@ const service = () => {
   );
 };
 
-export default service;
+export default Service;

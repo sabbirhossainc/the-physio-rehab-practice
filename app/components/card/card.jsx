@@ -1,7 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 
-const card = (props) => {
+const Card = (props) => {
   return (
     <div className="px-5">
       <div className="max-w-sm rounded-lg shadow-gray-400 shadow-sm-light dark:bg-gray-800 dark:border-gray-700">
@@ -23,4 +23,4 @@ const card = (props) => {
   );
 };
 
-export default card;
+export default Card;

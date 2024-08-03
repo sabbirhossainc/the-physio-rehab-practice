@@ -10,7 +10,7 @@ import "swiper/css/autoplay";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 
-export default function Page() {
+export default function Carousel() {
   return (
     <>
       <div className="mt-28 bg-gray-200">

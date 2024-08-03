@@ -12,7 +12,7 @@ export async function generateMetadata() {
   };
 }
 
-const contact = () => {
+const page = () => {
   return (
     <BgArtTemplate bread={true}>
       <Blog>
@@ -77,4 +77,4 @@ const contact = () => {
   );
 };
 
-export default contact;
+export default page;

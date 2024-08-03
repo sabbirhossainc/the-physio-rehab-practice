@@ -6,11 +6,11 @@ export const LinkBtn = ({ linkText, href, onClick }) => {
     <>
       {href ? (
         <Link href={href}>
-          <div className="h-full flex items-center border-primary border justify-evenly gap-4 px-4 py-2 rounded-lg hover:bg-primary/10 cursor-pointer hover:border-none">
-            <div className="flex-grow">
+          <div className="h-full flex items-center border-primary border justify-evenly gap-4 p-3 rounded-lg hover:bg-primary/10 cursor-pointer hover:border-none">
+            <div className="flex-grow flex items-center justify-start">
               <h2 className="text-primary title-font font-bold">{linkText}</h2>
             </div>
-            <div className="w-auto h-auto p-3 justify-center items-center flex rounded-full">
+            <div className="w-auto h-auto justify-center items-center flex rounded-full">
               <FaArrowRightLong
                 className="text-2xl text-primary"
                 width={300}
@@ -21,11 +21,11 @@ export const LinkBtn = ({ linkText, href, onClick }) => {
         </Link>
       ) : (
         <div onClick={onClick}>
-          <div className="h-full flex items-center border-primary border justify-evenly gap-4 px-4 py-2 rounded-lg hover:bg-primary/10 cursor-pointer hover:border-none">
-            <div className="flex-grow">
+          <div className="h-full flex items-center border-primary border justify-evenly gap-4 p-3 rounded-lg hover:bg-primary/10 cursor-pointer hover:border-none">
+            <div className="flex-grow flex items-center justify-start">
               <h2 className="text-primary title-font font-bold">{linkText}</h2>
             </div>
-            <div className="w-auto h-auto p-3 justify-center items-center flex rounded-full">
+            <div className="w-auto h-auto justify-center items-center flex rounded-full">
               <FaArrowRightLong
                 className="text-2xl text-primary"
                 width={300}

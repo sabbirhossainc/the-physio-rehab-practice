@@ -1,4 +1,4 @@
-import Breadcrumb from "@/ui/breadcrumb/breadcrumb";
+import Breadcrumb from "@/app/ui/breadcrumb/breadcrumb";
 
 const BgArtTemplate = ({ children, bread, top }) => {
   return (
@@ -15,7 +15,7 @@ const BgArtTemplate = ({ children, bread, top }) => {
                   </div>
                 </div>
                 <div>
-                  <span className="absolute -right-9 -top-10 z-[-1]">
+                  {/* <span className="absolute -right-9 -top-10 z-[-1]">
                     <svg
                       width={100}
                       height={100}
@@ -30,7 +30,7 @@ const BgArtTemplate = ({ children, bread, top }) => {
                         fill="#3056D3"
                       />
                     </svg>
-                  </span>
+                  </span> */}
                   <span className="absolute -right-10 top-[90px] z-[-1]">
                     <svg
                       width={34}

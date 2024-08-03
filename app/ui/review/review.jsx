@@ -1,6 +1,6 @@
 "use client";
 
-const review = () => {
+const Review = () => {
   return (
     <>
       <div className="flex flex-col items-center justify-between py-20">
@@ -13,4 +13,4 @@ const review = () => {
   );
 };
 
-export default review;
+export default Review;

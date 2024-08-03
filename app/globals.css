@@ -5,8 +5,8 @@
 :root {
   --foreground-rgb: 0, 0, 0;
   --background-rgb: 245, 205, 225;
-  --primary: #5700AD;
-  --secondary: #3F83F8;
+  --primary: rgb(87, 0, 173);
+  --secondary: rgb(63, 131, 248);
 }
 
 body {
@@ -48,27 +48,27 @@ body {
 
 /* article style */
 
-.article-title{
+.article-title {
   font-weight: 700;
-  font-size:xx-large;
+  font-size: xx-large;
   color: var(--primary);
   text-decoration: underline;
 }
 
-.faq-items{
+.faq-items {
   padding: 10px 0px;
 }
 
-.faq-items h3{
+.faq-items h3 {
   font-size: x-large;
   color: var(--secondary);
 }
 
-.faq-items p{
+.faq-items p {
   padding: 5px 0;
 }
 
-.faqlist{
+.faqlist {
   display: flex;
   flex-direction: column;
   gap: 10px;
@@ -76,9 +76,9 @@ body {
 
 /* article style */
 
-/*  */
+/* map hero section */
 
-.hero-img{
+.hero-img {
   height: 650px;
   overflow: hidden;
   background-size: cover;
@@ -90,7 +90,19 @@ body {
   left: 0;
   right: 0;
   bottom: 0;
-  background-color: rgba(0,0,0,0.5);/* Black background with opacity */
+  background-color: rgba(0, 0, 0, 0.5); /* Black background with opacity */
 }
 
-/*  */
+/* map hero section */
+
+/* Image container */
+.blurdataurl {
+  background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mNk4G4vAgABqwEGEzLyIQAAAABJRU5ErkJggg==);
+}
+
+/* .bgarttempbg{
+  background-image: url(https://cdn-media-1.freecodecamp.org/imgr/MJAkxbh.png);
+  background-repeat: repeat-y;
+} */
+
+/* Image container */

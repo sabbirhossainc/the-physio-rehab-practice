@@ -2,11 +2,11 @@ import getAllBlogs from "@/lib/getAllBlogs/getAllBlogs";
 import BgArtTemplate from "@/Templates/bgArtTemplate/BgArtTemplate";
 import {
   Blog,
-  BlogHeader,
   BlogBody,
+  BlogHeader,
   ImageContainer,
 } from "@/Templates/blog/Blog";
-import { LinkGroup, Links, LinkBtn } from "@/Templates/linkGroup/LinkGroup";
+import { LinkBtn, LinkGroup, Links } from "@/Templates/linkGroup/LinkGroup";
 
 export async function generateMetadata() {
   const blogData = await getAllBlogs();

@@ -1,4 +1,4 @@
-import { BackToTop } from "@/app/components/buttons/Buttons";
+import { BackToTop } from "@/Templates/buttons/Buttons";
 import Footer from "@/ui/footer/footer";
 import Marquee from "@/ui/marquee/marquee";
 import Navigation from "@/ui/navbar/navbar";

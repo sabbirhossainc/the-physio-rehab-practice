@@ -1,8 +1,8 @@
 import getFaqs from "@/lib/getFaqs/getFaqs";
-import BgArtTemplate from "../components/Templates/bgArtTemplate/BgArtTemplate";
-import { Blog, ImageContainer } from "../components/Templates/blog/Blog";
-import { DropDownBtn } from "../components/buttons/Buttons";
-import { HeroText } from "../components/texts/texts";
+import BgArtTemplate from "@/Templates/bgArtTemplate/BgArtTemplate";
+import { Blog, ImageContainer } from "@/Templates/blog/Blog";
+import { DropDownBtn } from "@/Templates/buttons/Buttons";
+import { HeroText } from "@/Templates/texts/Texts";
 
 export default async function page() {
   const faqData = await getFaqs();
@@ -17,9 +17,7 @@ export default async function page() {
           addClass={"object-cover object-top"}
         />
         <div className="z-20 relative flex items-center justify-center text-center w-full ">
-          <HeroText>
-            faq's
-          </HeroText>
+          <HeroText>faq's</HeroText>
           <DropDownBtn href={"#faq-content"} />
         </div>
       </div>

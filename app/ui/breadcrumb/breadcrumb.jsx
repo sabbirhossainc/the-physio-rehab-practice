@@ -1,6 +1,6 @@
 "use client";
 
-import { Blog } from "@/app/components/Templates/blog/Blog";
+import { Blog } from "@/Templates/blog/Blog";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { FaAngleRight } from "react-icons/fa6";

@@ -1,8 +1,8 @@
-import { GoHome } from "react-icons/go";
-import { IoArrowBackOutline } from "react-icons/io5";
-import { BackBtn, HomeBtn } from "@/app/components/buttons/Buttons";
 import BgArtTemplate from "@/Templates/bgArtTemplate/BgArtTemplate";
 import { Blog } from "@/Templates/blog/Blog";
+import { BackBtn, HomeBtn } from "@/Templates/buttons/Buttons";
+import { GoHome } from "react-icons/go";
+import { IoArrowBackOutline } from "react-icons/io5";
 
 export default function NotFound() {
   return (

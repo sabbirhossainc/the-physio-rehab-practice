@@ -24,7 +24,7 @@ export default function RootLayout({ children }) {
         <Navigation />
         {children}
         <BackToTop />
-        <Marquee/>
+        <Marquee />
         <Footer />
       </body>
     </html>

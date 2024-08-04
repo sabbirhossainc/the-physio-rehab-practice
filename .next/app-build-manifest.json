@@ -5,6 +5,11 @@
       "static/chunks/main-app.js",
       "static/chunks/app/loading.js"
     ],
+    "/what-we-treat/[slug]/page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/chunks/app/what-we-treat/[slug]/page.js"
+    ],
     "/layout": [
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
@@ -21,25 +26,21 @@
       "static/chunks/main-app.js",
       "static/chunks/app/error.js"
     ],
-    "/careers/page": [
+    "/page": [
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
-      "static/chunks/app/careers/page.js"
-    ],
-    "/what-we-treat/page": [
-      "static/chunks/webpack.js",
-      "static/chunks/main-app.js",
-      "static/chunks/app/what-we-treat/page.js"
-    ],
-    "/musculoskeletal/page": [
-      "static/chunks/webpack.js",
-      "static/chunks/main-app.js",
-      "static/chunks/app/musculoskeletal/page.js"
+      "static/css/app/page.css",
+      "static/chunks/app/page.js"
     ],
     "/appointments/page": [
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
       "static/chunks/app/appointments/page.js"
+    ],
+    "/careers/page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/chunks/app/careers/page.js"
     ],
     "/faq/page": [
       "static/chunks/webpack.js",
@@ -51,10 +52,15 @@
       "static/chunks/main-app.js",
       "static/chunks/app/contact/page.js"
     ],
-    "/what-we-treat/[slug]/page": [
+    "/musculoskeletal/page": [
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
-      "static/chunks/app/what-we-treat/[slug]/page.js"
+      "static/chunks/app/musculoskeletal/page.js"
+    ],
+    "/what-we-treat/page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/chunks/app/what-we-treat/page.js"
     ]
   }
 }

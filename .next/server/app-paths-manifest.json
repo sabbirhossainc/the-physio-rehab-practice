@@ -1,13 +1,13 @@
 {
-  "/_not-found": "app/_not-found.js",
   "/appointments/page": "app/appointments/page.js",
-  "/contact/page": "app/contact/page.js",
-  "/careers/page": "app/careers/page.js",
-  "/favicon.ico/route": "app/favicon.ico/route.js",
+  "/_not-found": "app/_not-found.js",
   "/faq/page": "app/faq/page.js",
+  "/favicon.ico/route": "app/favicon.ico/route.js",
   "/musculoskeletal/page": "app/musculoskeletal/page.js",
-  "/services/page": "app/services/page.js",
-  "/page": "app/page.js",
   "/what-we-treat/page": "app/what-we-treat/page.js",
+  "/page": "app/page.js",
+  "/careers/page": "app/careers/page.js",
+  "/contact/page": "app/contact/page.js",
+  "/services/page": "app/services/page.js",
   "/what-we-treat/[slug]/page": "app/what-we-treat/[slug]/page.js"
 }

@@ -21,7 +21,7 @@ export default async function page() {
           <DropDownBtn href={"#faq-content"} />
         </div>
       </div>
-      <BgArtTemplate bread={true} top={true}>
+      <BgArtTemplate nobreadcrumb={true} top={true}>
         <Blog id={"faq-content"}>
           {faqData?.map((faqs, index) => (
             <article className="content" key={index}>

@@ -2,12 +2,12 @@ import getAllBlogs from "@/lib/getAllBlogs/getAllBlogs";
 import BgArtTemplate from "@/Templates/bgArtTemplate/BgArtTemplate";
 import {
   Blog,
-  BlogHeader,
   BlogBody,
   BlogFooter,
+  BlogHeader,
   ImageContainer,
 } from "@/Templates/blog/Blog";
-import { LinkGroup, Links, LinkBtn } from "@/Templates/linkGroup/LinkGroup";
+import { LinkBtn, LinkGroup, Links } from "@/Templates/linkGroup/LinkGroup";
 
 export async function generateMetadata() {
   const blogData = await getAllBlogs();
@@ -36,9 +36,9 @@ export async function generateMetadata() {
 }
 
 export default async function page() {
+  const blogData = await getAllBlogs();
   const pattern = /\W/g;
 
-  const blogData = await getAllBlogs();
   const filterByBlog = (blog) => {
     const targetBlog = blog.blogheading.blogTitle.includes("musculoskeletal");
     if (targetBlog) {
@@ -47,7 +47,7 @@ export default async function page() {
   };
 
   return (
-    <BgArtTemplate bread={true}>
+    <BgArtTemplate nobreadcrumb={true}>
       {blogData?.filter(filterByBlog)?.map((blog, index) => (
         <Blog key={index}>
           {/* Blog Image0 */}

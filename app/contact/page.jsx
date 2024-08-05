@@ -14,7 +14,7 @@ export async function generateMetadata() {
 
 const page = () => {
   return (
-    <BgArtTemplate bread={true}>
+    <BgArtTemplate nobreadcrumb={true}>
       <Blog>
         <div className="flex flex-col w-full gap-8">
           <span className=" block text-3xl md:text-5xl font-bold text-primary text-center">

@@ -1,6 +1,6 @@
 import Breadcrumb from "@/app/ui/breadcrumb/breadcrumb";
 
-const BgArtTemplate = ({ children, bread, top }) => {
+const BgArtTemplate = ({ children, nobreadcrumb, top }) => {
   return (
     <>
       <div className={`relative z-10 overflow-hidden bg-gray-50 dark:bg-black pb-24 md:pb-32 ${top? "pt-24 lg:pt-32" : 'pt-40 md:pt-60'}`} >
@@ -10,7 +10,7 @@ const BgArtTemplate = ({ children, bread, top }) => {
               <div className="relative rounded-lg bg-primary-bg py-8 px-4 shadow-lg dark:bg-dark-2">
                 <div className="text-gray-600 body-font">
                   <div className="container mx-auto flex flex-col justify-between gap-8">
-                    {bread ? null : <Breadcrumb />}
+                    {nobreadcrumb ? null : <Breadcrumb />}
                     {children}
                   </div>
                 </div>

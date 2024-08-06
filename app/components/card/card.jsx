@@ -6,7 +6,7 @@ const Card = (props) => {
     <div className="px-5">
       <div className="max-w-sm rounded-lg shadow-gray-400 shadow-sm-light dark:bg-gray-800 dark:border-gray-700">
         <Link href="">
-          <Image className="rounded-t-lg" src={props.url} alt={props.alt} />
+          <Image className="rounded-t-lg w-auto h-auto" src={props.url} alt={props.alt} width={400} height={100} quality={100}/>
         </Link>
         <div className="p-5">
           <Link href="">

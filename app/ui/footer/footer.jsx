@@ -1,6 +1,5 @@
 // "use client";
 
-import Logo from "@/public/logo-1.png";
 import Image from "next/image";
 import Link from "next/link";
 // import { useEffect, useState } from "react";
@@ -17,10 +16,14 @@ const footer = () => {
               className="flex title-font font-medium items-center md:justify-start justify-center text-white"
             >
               <Image
-                src={Logo}
+                src={
+                  "https://res.cloudinary.com/dci00bjtd/image/upload/f_auto,q_auto/v1/images/logo_bbeuz2"
+                }
                 className="rounded-md w-28 h-28"
                 alt="Logo"
-                priority
+                width={400}
+                height={100}
+                quality={100}
               />
             </Link>
             <span className="text-xl uppercase">The physio rehab practice</span>
@@ -46,14 +49,18 @@ const footer = () => {
                   </Link>
                 </li>
                 <li>
-                  <Link  href="" className="text-gray-400 hover:text-white">Blog</Link>
+                  <Link href="" className="text-gray-400 hover:text-white">
+                    Blog
+                  </Link>
                 </li>
                 <li>
-                  <Link href="" className="text-gray-400 hover:text-white">About</Link>
+                  <Link href="" className="text-gray-400 hover:text-white">
+                    About
+                  </Link>
                 </li>
               </nav>
             </div>
-{/* Help center section */}
+            {/* Help center section */}
             <div className="lg:w-1/4 md:w-1/2 w-full px-4">
               <h2 className="title-font font-medium text-white tracking-widest text-sm mb-3">
                 HELP CENTER
@@ -75,11 +82,14 @@ const footer = () => {
                   </Link>
                 </li>
                 <li>
-                  <Link href="" className="text-gray-400 hover:text-white"></Link>
+                  <Link
+                    href=""
+                    className="text-gray-400 hover:text-white"
+                  ></Link>
                 </li>
               </nav>
             </div>
-{/* Legal section */}
+            {/* Legal section */}
             <div className="lg:w-1/4 md:w-1/2 w-full px-4">
               <h2 className="title-font font-medium text-white tracking-widest text-sm mb-3">
                 LEGAL
@@ -118,7 +128,7 @@ const footer = () => {
               </Link>
             </p>
             <span className="inline-flex sm:ml-auto sm:mt-0 mt-2 justify-center sm:justify-start">
-              <Link  href="" className="text-gray-400">
+              <Link href="" className="text-gray-400">
                 <svg
                   fill="currentColor"
                   strokeLinecap="round"

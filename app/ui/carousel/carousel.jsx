@@ -62,8 +62,11 @@ export default function Carousel() {
               <Image
                 src={image.src}
                 alt={image.alt}
-                className="block h-[36rem] w-full object-cover"
+                className={`block h-[36rem] w-full object-cover ${image.addClass}`}
                 property="true"
+                width={400}
+                height={100}
+                quality={100}
               />
               <div className="absolute inset-0 bg-black opacity-50" />
             </SwiperSlide>
